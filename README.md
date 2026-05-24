@@ -1,2 +1,3 @@
-# vitalwatch-iot-anomaly-detection
-Every heartbeat tells a story. ML-powered anomaly detection on simulated wearable vitals - because a spike in heart rate at 3am shouldn't go unnoticed.
+# VitalWatch — IoT Heart Rate & SpO2 Anomaly Detection
+ML-based anomaly detection on physiological signals using the MIT-BIH Arrhythmia Database.
+Status: In Progress
