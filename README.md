@@ -90,7 +90,7 @@ vitalwatch-iot-anomaly-detection/
 
 ├── phase2_feature_engineering.ipynb       # RR intervals, heart rate, rolling features
 
-├── phase3_anamoly_detaction.ipynb         # Baseline Isolation Forest (3 features)
+├── phase3_anomaly_detection.ipynb         # Baseline Isolation Forest (3 features)
 
 ├── phase4_model_improvement.ipynb         # Enhanced model (6 features)
 
