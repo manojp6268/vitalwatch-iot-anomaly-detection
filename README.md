@@ -85,7 +85,9 @@ tool for this specific problem.
 ![VitalWatch - Three Panel Clinical View](vitalwatch_final.png)
 
 *Top: Raw ECG stream with anomaly flags (red = true anomaly, orange = false positive)*
+
 *Middle: Heart rate over time with tachycardia/bradycardia thresholds*
+
 *Bottom: RR interval trace with scatter markers at flagged beats*
 
 ---
@@ -115,8 +117,8 @@ vitalwatch-iot-anomaly-detection/
 
 └── README.md
 
----
 ```
+---
 
 ## Setup
 
