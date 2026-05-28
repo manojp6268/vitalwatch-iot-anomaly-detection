@@ -82,6 +82,7 @@ tool for this specific problem.
 
 ## Project Structure
 
+```
 vitalwatch-iot-anomaly-detection/
 
 │
@@ -105,6 +106,7 @@ vitalwatch-iot-anomaly-detection/
 └── README.md
 
 ---
+```
 
 ## Setup
 
