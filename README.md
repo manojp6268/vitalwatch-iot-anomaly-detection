@@ -164,5 +164,25 @@ Python · Pandas · NumPy · Scikit-learn · Matplotlib · WFDB · Jupyter · An
 
 ---
 
+## Live Demo - Google Fit Integration
+
+VitalWatch connects to real wearable data via Google Fit API.
+
+The dashboard trains on MIT-BIH clinical data, then monitors
+your own heart rate in real time - flagging anomalies using
+the OR Ensemble (Isolation Forest + Autoencoder).
+
+To run locally:
+1. Set up Google Cloud credentials (see setup guide)
+2. Enable Google Fit sync on your wearable
+3. Run: `streamlit run streamlit_app.py`
+
+> Note: Consumer wearable data has lower precision than
+> clinical ECG. False positive rate is higher in live demo
+> than in clinical evaluation. This is a personal health
+> curiosity tool, not a medical device.
+
+---
+
 *Built from scratch as part of a self-directed learning journey in 
 Healthcare ML and IoT systems.*
