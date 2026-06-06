@@ -1,6 +1,7 @@
 credentials.json
 token.json
-VitalWatch.docx
-VitalWatch.pdf
-__pycache__
+__pycache__/
+*.pyc
+.env
+.DS_Store
 .ipynb_checkpoints
