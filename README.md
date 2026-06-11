@@ -128,14 +128,42 @@ Live results presented as proof-of-concept pipeline demonstration. Consumer PPG 
 ```
 vitalwatch-iot-anomaly-detection/
 │
-├── phase1_data_exploration.ipynb       # MIT-BIH loading, EDA, beat distribution analysis
-├── phase2_feature_engineering.ipynb    # RR intervals, heart rate, rolling features
-├── phase3_anomaly_detection.ipynb      # Baseline Isolation Forest (3 features, 1 record)
-├── phase4_model_improvement.ipynb      # Enhanced model (6 features, multi-record)
-├── phase4_model_comparison.ipynb       # DBSCAN vs Isolation Forest analysis
-├── phase5_iot_simulation.ipynb         # Autoencoder, LSTM, ensemble, full evaluation
+├── phase1_data_exploration.ipynb         # MIT-BIH loading, EDA, signal visualisation
+├── phase2_feature_engineering.ipynb      # RR intervals, heart rate, rolling features (6 total)
+├── phase3_anomaly_detection.ipynb        # Baseline Isolation Forest (3 features, 1 record)
+├── phase4_model_improvement.ipynb        # Enhanced Isolation Forest (6 features, multi-record)
+├── phase4_model_comparison.ipynb         # DBSCAN vs Isolation Forest - why DBSCAN fails here
+├── phase5_iot_simulation.ipynb           # Live stream simulation, alert logging, visualisation
+├── phase6_autoencoder.ipynb              # Feedforward Autoencoder - reconstruction error anomaly scoring
+├── phase7_multi_patient.ipynb            # Multi-patient generalisation across MIT-BIH records
+├── phase8_lstm_anomaly_detection.ipynb   # LSTM Autoencoder + signal dilution characterisation
+├── phase9_ensemble.ipynb                 # OR/AND ensemble design and comparison
 │
-├── vitalwatch_final.png                # Evaluation summary dashboard
+├── phase11a_full_dataset_loading.ipynb   # Full 46-record MIT-BIH dataset loading and storage
+├── phase11b_extended_evaluation.ipynb    # Extended evaluation across all 108,098 beats
+├── phase11c_confusion_matrices.ipynb     # Confusion matrices and F1 heatmap generation
+├── phase11d_baseline_comparison.ipynb    # Pan-Tompkins clinical baseline comparison (10 records)
+│
+├── streamlit_app.py                      # Live IoT dashboard - Google Fit API + OR Ensemble
+├── google_fit_auth.py                    # OAuth2 authentication for Google Fit API
+│
+├── phase11_combined_dataset.parquet      # Full 46-record processed dataset
+├── phase11_evaluation_results.csv        # Per-model evaluation metrics
+├── phase11_per_record_results.csv        # Per-record F1 scores across all 46 records
+├── phase11_record_summary.csv            # MIT-BIH record group summary
+│
+├── phase11_dataset_distribution.png      # Beat type distribution and class split
+├── phase11_confusion_matrices.png        # Confusion matrices - all 4 model configurations
+├── phase11_f1_heatmap.png                # Per-record F1 heatmap across 46 records
+├── phase11_pr_roc_curves.png             # Precision-Recall and ROC curves
+├── phase11_baseline_comparison.png       # VitalWatch vs Pan-Tompkins per-record F1
+├── phase11_final_summary.png             # Full evaluation summary dashboard
+├── phase7_generalisation.png             # Multi-patient generalisation results
+├── phase8_lstm.png                       # LSTM signal dilution visualisation
+├── phase9_comparison.png                 # 3-model comparison summary
+├── vitalwatch_final.png                  # Live IoT dashboard screenshot
+│
+├── requirements.txt                      # Python dependencies
 └── README.md
 ```
 
@@ -149,13 +177,16 @@ conda create -n vitalwatch python=3.10
 conda activate vitalwatch
 
 # Install dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras jupyter wfdb neurokit2 streamlit
+pip install -r requirements.txt
 
-# Launch
+# Launch notebooks
 jupyter notebook
+
+# Run live dashboard
+streamlit run streamlit_app.py
 ```
 
-Run notebooks in order: phase1 → phase5.
+Run notebooks in order: phase1 → phase2 → phase3 → phase4 → phase5 → phase6 → phase7 → phase8 → phase9 → phase11a → phase11b → phase11c → phase11d.
 
 ---
 
