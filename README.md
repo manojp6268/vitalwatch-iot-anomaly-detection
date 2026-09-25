@@ -210,7 +210,6 @@ Target venues: IEEE Access, Sensors (MDPI). arXiv preprint forthcoming.
 
 ## What's Next
 
-- [ ] Window-level maximum reconstruction error as LSTM anomaly score (signal dilution fix)
 - [ ] Patient-specific adaptive thresholding to overcome calibration mismatch
 - [ ] 1D-CNN architecture comparison
 - [ ] Higher-frequency wearable ECG integration beyond consumer optical PPG
